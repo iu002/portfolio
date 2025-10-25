@@ -233,6 +233,27 @@
       font-weight: bold;
     }
 
+    /* ===== ICON GRID ===== */
+    .language-icons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: center;
+      margin: 20px 0;
+    }
+
+    .language-icons img {
+      width: 55px;
+      height: 55px;
+      transition: transform 0.3s ease, filter 0.3s ease;
+      filter: drop-shadow(0 0 5px rgba(0,191,255,0.3));
+    }
+
+    .language-icons img:hover {
+      transform: scale(1.2);
+      filter: drop-shadow(0 0 15px rgba(0,191,255,0.8));
+    }
+
     /* ===== CONTACT & FOOTER ===== */
     .social-links a {
       margin: 0 10px;
@@ -299,20 +320,39 @@
       </table>
     </section>
 
+    <!-- ===== SKILLS SECTION ===== -->
     <section id="skills" class="section">
       <h2>Skills</h2>
-      <h3>Technical Skills</h3>
-      <ul>
-        <li>Programming: C, C++, Python, Java, JavaScript, HTML, CSS</li>
-        <li>Frameworks: Flask, TensorFlow, Keras, Django</li>
-        <li>Tools: Git, MySQL</li>
-        <li>Libraries: NumPy, Pandas, Matplotlib, Pillow, NLTK</li>
-        <li>Concepts: Generative AI, Deep Learning, Neural Networks, DSA, OOPS, Agile</li>
-      </ul>
+
+      <h3>Programming Languages</h3>
+      <div class="language-icons">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" alt="C" title="C">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++" title="C++">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" title="Python">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" title="Java">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" title="JavaScript">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" title="HTML5">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" title="CSS3">
+      </div>
+
+      <h3>Frameworks & Tools</h3>
+      <div class="language-icons">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg" alt="Flask" title="Flask">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" alt="Django" title="Django">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" alt="TensorFlow" title="TensorFlow">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/keras/keras-original.svg" alt="Keras" title="Keras">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" title="Git">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" title="MySQL">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" alt="NumPy" title="NumPy">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" alt="Pandas" title="Pandas">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/matplotlib/matplotlib-original.svg" alt="Matplotlib" title="Matplotlib">
+      </div>
+
       <h3>Soft Skills</h3>
       <p>Communication, Team Collaboration, Problem Solving, Adaptability, Time Management</p>
     </section>
 
+    <!-- ===== PROJECTS ===== -->
     <section id="projects" class="section">
       <h2>Projects</h2>
       <div class="project-card">
@@ -340,6 +380,7 @@
       </div>
     </section>
 
+    <!-- ===== ACHIEVEMENTS ===== -->
     <section id="achievements" class="section">
       <h2>Achievements</h2>
       <ul>
@@ -350,10 +391,11 @@
       </ul>
     </section>
 
+    <!-- ===== CONTACT ===== -->
     <section id="contact" class="section">
       <h2>Contact</h2>
       <p><strong>Email:</strong> <a href="mailto:thisisayushi.ap@gmail.com">thisisayushi.ap@gmail.com</a></p>
-      <p><strong>Phone:</strong> 9935494699</p>
+      <p><strong>Phone:</strong> 99********</p>
       <div class="social-links">
         <a href="https://linkedin.com/in/ayushi-pandey" target="_blank">LinkedIn</a>
         <a href="https://github.com/ayushi" target="_blank">GitHub</a>
