@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ayushi Pandey - Portfolio</title>
+
+  <style>
+    /* ===== GLOBAL STYLES ===== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      background: radial-gradient(circle at top, #071424 0%, #000814 80%);
+      color: #d9e6ff;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3 {
+      color: #ffffff;
+    }
+
+    a {
+      text-decoration: none;
+      color: #00bfff;
+      transition: all 0.3s ease;
+    }
+
+    a:hover {
+      color: #66e0ff;
+      text-shadow: 0 0 10px #00bfff;
+    }
+
+    /* ===== HEADER ===== */
+    header {
+      background: rgba(0, 20, 40, 0.9);
+      backdrop-filter: blur(10px);
+      padding: 20px 0;
+      text-align: center;
+      border-bottom: 1px solid rgba(0, 191, 255, 0.2);
+      box-shadow: 0 0 15px rgba(0, 191, 255, 0.2);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      background: linear-gradient(90deg, #00bfff, #008cff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    header p {
+      font-style: italic;
+      color: #a5c9ff;
+      margin-bottom: 10px;
+    }
+
+    nav a {
+      margin: 0 15px;
+      font-weight: bold;
+      color: #cfe6ff;
+    }
+
+    nav a:hover {
+      color: #00bfff;
+      text-shadow: 0 0 8px #00bfff;
+    }
+
+    /* ===== HERO SECTION ===== */
+    .hero {
+      text-align: center;
+      padding: 120px 20px;
+      background: radial-gradient(circle at center, rgba(10, 30, 60, 0.9), #000814 90%);
+      border-bottom: 1px solid rgba(0, 191, 255, 0.2);
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Glowing container and name */
+    .glow-container {
+      position: relative;
+      display: inline-block;
+      padding: 40px 80px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(0,255,255,0.15) 0%, rgba(0,0,0,0) 70%);
+      box-shadow: 0 0 60px rgba(0, 255, 255, 0.25);
+      animation: pulseAura 4s ease-in-out infinite alternate;
+    }
+
+    @keyframes pulseAura {
+      from {
+        box-shadow: 0 0 40px rgba(0,255,255,0.2);
+      }
+      to {
+        box-shadow: 0 0 100px rgba(0,255,255,0.5);
+      }
+    }
+
+    .glow-title {
+      font-size: 3.2rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      background: linear-gradient(90deg, #00e0ff, #a020f0, #00e0ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow:
+        0 0 10px rgba(0, 255, 255, 0.6),
+        0 0 20px rgba(0, 150, 255, 0.4),
+        0 0 30px rgba(160, 32, 240, 0.3);
+      animation: pulseGlow 3s infinite alternate;
+    }
+
+    @keyframes pulseGlow {
+      0% {
+        text-shadow:
+          0 0 10px rgba(0, 255, 255, 0.6),
+          0 0 20px rgba(0, 150, 255, 0.4),
+          0 0 30px rgba(160, 32, 240, 0.3);
+      }
+      100% {
+        text-shadow:
+          0 0 20px rgba(0, 255, 255, 1),
+          0 0 40px rgba(160, 32, 240, 0.8),
+          0 0 60px rgba(0, 150, 255, 0.7);
+      }
+    }
+
+    .hero p {
+      max-width: 700px;
+      margin: 30px auto 20px;
+      color: #bcd2f0;
+      font-size: 1.1em;
+    }
+
+    /* ===== GLOWING BUTTON ===== */
+    .btn {
+      display: inline-block;
+      background: linear-gradient(90deg, #00e0ff, #0078ff);
+      color: #fff;
+      padding: 14px 30px;
+      border-radius: 30px;
+      margin-top: 15px;
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      font-size: 0.9em;
+      letter-spacing: 1px;
+      box-shadow: 0 0 15px rgba(0, 191, 255, 0.5);
+    }
+
+    .btn:hover {
+      background: linear-gradient(90deg, #00ffff, #a020f0);
+      box-shadow: 0 0 30px #00bfff, 0 0 50px #a020f0;
+      transform: scale(1.05);
+    }
+
+    /* ===== SECTIONS ===== */
+    .container {
+      width: 90%;
+      max-width: 1000px;
+      margin: 50px auto;
+    }
+
+    .section {
+      margin-bottom: 60px;
+      padding: 30px;
+      background: rgba(0, 25, 50, 0.6);
+      border-radius: 10px;
+      box-shadow: 0 0 25px rgba(0, 191, 255, 0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: fadeInUp 1s ease forwards;
+    }
+
+    .section:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 25px rgba(0, 191, 255, 0.2);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+      color: #bcd2f0;
+    }
+
+    th, td {
+      padding: 12px;
+      border: 1px solid rgba(0, 191, 255, 0.2);
+    }
+
+    th {
+      background: rgba(0, 191, 255, 0.1);
+      color: #00bfff;
+    }
+
+    ul {
+      list-style-type: none;
+      padding-left: 10px;
+    }
+
+    ul li::before {
+      content: "• ";
+      color: #00bfff;
+    }
+
+    /* ===== PROJECT CARDS ===== */
+    .project-card {
+      background: rgba(0, 20, 40, 0.8);
+      border: 1px solid rgba(0, 191, 255, 0.1);
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 20px;
+      transition: all 0.3s ease;
+    }
+
+    .project-card:hover {
+      box-shadow: 0 0 25px rgba(0, 191, 255, 0.2);
+      transform: translateY(-4px);
+    }
+
+    .project-card a {
+      display: inline-block;
+      margin-top: 10px;
+      color: #00bfff;
+      font-weight: bold;
+    }
+
+    /* ===== CONTACT & FOOTER ===== */
+    .social-links a {
+      margin: 0 10px;
+      font-size: 1.2em;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px 0;
+      background: rgba(0, 20, 40, 0.9);
+      border-top: 1px solid rgba(0, 191, 255, 0.2);
+      color: #8fbefc;
+      font-size: 0.9em;
+    }
+
+    /* ===== ANIMATIONS ===== */
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Ayushi Pandey</h1>
+    <p>Innovating with AI, one project at a time.</p>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section id="home" class="hero">
+    <div class="glow-container">
+      <h1 class="glow-title">Ayushi Pandey</h1>
+    </div>
+    <p>I'm a Computer Science Engineering student passionate about Generative AI, Deep Learning, and building intelligent systems. I love turning ideas into scalable solutions.</p>
+    <a href="#projects" class="btn">View My Work</a>
+  </section>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <div class="container">
+    <section id="about" class="section">
+      <h2>About Me</h2>
+      <p>Innovative and detail-oriented Computer Science Engineering student with hands-on experience in GenAI, Deep Learning, and software development. Skilled in Python, C++, Flask, and TensorFlow. I thrive in collaborative environments and love transforming creative ideas into MVPs.</p>
+      
+      <h3>Education</h3>
+      <table>
+        <tr><th>Degree</th><th>Institution</th><th>Year</th></tr>
+        <tr><td>B.Tech in CSE</td><td>United College of Engineering and Research, Prayagraj</td><td>2022–Present</td></tr>
+        <tr><td>Senior Secondary (12th)</td><td>SS Girls School, Prayagraj</td><td>2021</td></tr>
+        <tr><td>Secondary (10th)</td><td>Bethany Convent School, Prayagraj</td><td>2019</td></tr>
+      </table>
+    </section>
+
+    <section id="skills" class="section">
+      <h2>Skills</h2>
+      <h3>Technical Skills</h3>
+      <ul>
+        <li>Programming: C, C++, Python, Java, JavaScript, HTML, CSS</li>
+        <li>Frameworks: Flask, TensorFlow, Keras, Django</li>
+        <li>Tools: Git, MySQL</li>
+        <li>Libraries: NumPy, Pandas, Matplotlib, Pillow, NLTK</li>
+        <li>Concepts: Generative AI, Deep Learning, Neural Networks, DSA, OOPS, Agile</li>
+      </ul>
+      <h3>Soft Skills</h3>
+      <p>Communication, Team Collaboration, Problem Solving, Adaptability, Time Management</p>
+    </section>
+
+    <section id="projects" class="section">
+      <h2>Projects</h2>
+      <div class="project-card">
+        <h3>Image Caption Generator</h3>
+        <p>GenAI-based system using CNN + LSTM, deployed with Flask. Achieved 85% accuracy and fast inference.</p>
+        <a href="https://github.com/ayushi/image-caption-generator" target="_blank">GitHub Repo</a>
+      </div>
+
+      <div class="project-card">
+        <h3>Time Table Generator</h3>
+        <p>JavaScript web app for conflict-free scheduling for 50+ users.</p>
+        <a href="https://github.com/iu002/time-table-generator-" target="_blank">GitHub Repo</a>
+      </div>
+
+      <div class="project-card">
+        <h3>Digital Clock with Alarm</h3>
+        <p>Python Tkinter app with multiple alarms and modular design.</p>
+        <a href="https://github.com/ayushi/digital-clock-alarm" target="_blank">GitHub Repo</a>
+      </div>
+
+      <div class="project-card">
+        <h3>Blog Application</h3>
+        <p>Django-based platform with user auth, CRUD, and rich UI/UX.</p>
+        <a href="https://github.com/ayushi/blog-application" target="_blank">GitHub Repo</a>
+      </div>
+    </section>
+
+    <section id="achievements" class="section">
+      <h2>Achievements</h2>
+      <ul>
+        <li>IBM Virtual Internship – Generative AI (2025)</li>
+        <li>Python for Data Science – Coursera (2024)</li>
+        <li>DSA Course Completion (2024)</li>
+        <li>Recognized for innovation in GenAI academic projects</li>
+      </ul>
+    </section>
+
+    <section id="contact" class="section">
+      <h2>Contact</h2>
+      <p><strong>Email:</strong> <a href="mailto:thisisayushi.ap@gmail.com">thisisayushi.ap@gmail.com</a></p>
+      <p><strong>Phone:</strong> 9935494699</p>
+      <div class="social-links">
+        <a href="https://linkedin.com/in/ayushi-pandey" target="_blank">LinkedIn</a>
+        <a href="https://github.com/ayushi" target="_blank">GitHub</a>
+        <a href="https://leetcode.com/ayushi" target="_blank">LeetCode</a>
+      </div>
+    </section>
+  </div>
+
+  <footer>© 2025 Ayushi Pandey. All rights reserved.</footer>
+</body>
+</html>
