@@ -1,0 +1,67 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: radial-gradient(circle at top, #0f0f0f, #000000);
+  color: white;
+}
+
+/* HERO SECTION */
+.hero {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.glow-box {
+  text-align: center;
+  padding: 60px 80px;
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(15px);
+  box-shadow: 0 0 60px rgba(0, 255, 255, 0.25);
+  animation: pulse 3s infinite alternate;
+}
+
+.glow-box h1 span {
+  color: cyan;
+  text-shadow: 0 0 20px cyan;
+}
+
+@keyframes pulse {
+  from { transform: scale(1); }
+  to { transform: scale(1.05); }
+}
+
+/* SECTIONS */
+.section {
+  padding: 60px;
+  text-align: center;
+}
+
+h2 {
+  color: cyan;
+  margin-bottom: 20px;
+}
+
+/* TABLE */
+table {
+  margin: auto;
+  border-collapse: collapse;
+  width: 70%;
+}
+
+th, td {
+  border: 1px solid rgba(255,255,255,0.2);
+  padding: 12px;
+}
+
+/* LINKS */
+.social a {
+  margin: 10px;
+  color: cyan;
+  text-decoration: none;
+}
+.social a:hover {
+  text-shadow: 0 0 10px cyan;
+}
